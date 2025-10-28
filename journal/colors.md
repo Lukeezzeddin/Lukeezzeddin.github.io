@@ -1,14 +1,5 @@
 ![pixelart wizard](../images/Wizard.jpg)
 ![pixelart wizard](../images/Wizard2.png)
-djfgbodbvsdbg
-sdfv
-sdfbswdf
-bvws
-fbv
-dfv
-df
-vs
-f
 0A
 0A
 18
