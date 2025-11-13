@@ -9,7 +9,7 @@ My Partner's Key: 7
 
 Our initial shared key: 8
 
-## Part 2: Messaging
+## Part 2: Messagingi
 
 Complete this table with each of your messages. This should 
 include the entire conversation - the messages that you sent
@@ -21,8 +21,8 @@ and the messages that you received.
 | --------------- | --------------- | --- |
 | JWW             | BOO             |  8  |
 | DTZW RTR        | YOUR MOM        |  5  |
-|                 |                 |     |
-|                 |                 |     |
+| UKQNZWZ         | YOURDAD         | 22  |
+| TJPMNDNOZM      | YOURSISTER      | 21  |
 
 
 ## Part 3: Connection to TCP/IP Model
@@ -38,9 +38,11 @@ Go back to the first encrypted message that you sent (it should be in `rsa_encry
 This message is represented as a string of letters, numbers, and symbols. But we know that the real message is in binary.
 
 Select the first six characters from this message and copy them here:
-
+JWWDTZ
 Using the ASCII table, convert these five characters to binary (if necessary,
 include leading zeroes so that each character is 8 bits): 
+
+01001010 01010111 01010111 01000100 01010100 01011010
 
 ### Transport Layer: Break your message into packets
 
@@ -49,32 +51,34 @@ Assume that each packet can hold two bytes. Fill in the packet information below
     =========
     Packet 1:
 
-    Source: [Your Name]
-    Destination: [Partner's Name]  
+    Source: [Lukeezzeddin]
+    Destination: [Jacehaberlach]  
     Sequence: 1/3
-    Data: [binary for char 1] [binary for char 2]
+    Data: [01001010] [01010111]
     =========
     Packet 2:
 
-    Source: [Your Name]
-    Destination: [Partner's Name]
+    Source: [Lukeezzeddin]
+    Destination: [Jacehaberlach]
     Sequence: 2/3 
-    Data: [binary for char 3] [binary for char 4]
+    Data: [01010111] [01000100]
     =========
     Packet 3:
 
-    Source: [Your Name]
-    Destination: [Partner's Name]
+    Source: [Lukeezzeddin]
+    Destination: [Jacehaberlach]
     Sequence: 3/3
-    Data: [binary for char 5] [binary for char 6]
+    Data: [01010100] [01011010]
     =========
 
 ## Part 4: Reflection Questions
 
-- What is the difference between symmetric and asymmetric encryption? What purpose did each serve in this simulation?
+- What is the difference between symmetric and asymmetric encryption? What purpose did each serve in this simulation? asymmetric is when both people have a public key and a private key, and symmetric is all the other ones.
 - Why is it important that this protocol uses a new key for each message?
-- Why is it important that you never share your secret key?
+otherwise if you got one key you could see all the messages
+- Why is it important that you never share your secret key? then people can decrypt all your messages
 - In the transport layer, do these messages use TCP or UDP? Why?
-- Now that you've created packets in the transport layer, give a short explanation of what happens to these packets in the internet layer and in the link layer.
+tcp, because if there's one tiny change the message would be incomprehensible
+- Now that you've created packets in the transport layer, give a short explanation of what happens to these packets in the internet layer and in the link layer. the link layer sends it to a router and the router sends it to other routers in the internet layer
 - This protocol successfully encrypts the **content** of the message. Even though and adversary in the middle can't read the content of the message, what other
-information can they still see?
+information can they still see? they can see the encrypted message without knowing what it means
