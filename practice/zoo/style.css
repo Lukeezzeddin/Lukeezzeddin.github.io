@@ -1,0 +1,10 @@
+table, th, tr, td{
+border: 1px solid #00FF00;
+border-collapse: collapse;
+}
+body{
+	background-color: #000000;
+}
+p, h1, h2, table, a:visited, a:link{
+color: #00FF00;
+}
