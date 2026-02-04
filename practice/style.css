@@ -1,0 +1,70 @@
+.grid{
+display: grid;
+height: 100vh;
+width: 100vw;
+gap: 10px;
+grid:
+        'sideL hero   hero    hero ' 30vw
+        'sideL card1  card2   card3' 35vw
+	'sideL words1 words1 words1' 50vw
+        / 25vw   25vw   25vw   25vw;
+}
+#conveniently_placed_button{
+position:absolute;
+top: 22vw;
+left: 31vw;
+background-color: blue;
+padding-top:3vw;
+padding-left:6vw;
+padding-bottom:3vw;
+padding-right:6vw;
+border-radius:2.5vh;
+color:white;
+font-family:
+}
+#head{
+background-color:blue;
+height:20px;
+position:sticky;
+top:0px
+}
+#sidebar{
+background-color:green;
+grid-area: sideL;
+}
+#words1{
+background-color: grey;
+grid-area: words1;
+}
+#hero{
+grid-area: hero;
+overflow:hidden;
+}
+#heroText{
+font-size:calc(150px + 1vw);
+
+opacity: 0.5;
+color:white;
+position: absolute;
+right:calc(0.04*100vw);
+text-align: center;
+font-family:Arial, Helvetica, sans-serif;
+top: calc(-10px + 1vw);
+margin:0px;
+}
+#card1{
+grid-area: card1;
+background-color: blue;
+margin:15px;
+border-radius:50px:
+}
+#hero{
+grid-area: hero;
+overflow:hidden;
+
+}
+#hero{
+grid-area: hero;
+overflow:hidden;
+
+}

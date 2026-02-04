@@ -1,0 +1,59 @@
+html{
+background-color: #E0E5E5
+}
+
+.grid{
+display: grid;
+width: 100vw;
+gap: 10px;
+grid:
+        'sideL hero   hero    hero ' auto
+	'sideL words1 words1 words1' auto
+        / 225px   1fr   1fr   1fr;
+}
+.grid2{
+display: grid;
+width: 100vw;
+gap: 10px;
+grid:
+          'hero' auto
+	'words1' auto
+	  'back' 30px
+        / 1fr;
+}
+
+#sidebar{
+grid-area: sideL;
+font-size: 25px;
+line-height: 1.75;
+padding-right:25px;
+
+}
+#sidebar_text{
+position:fixed;
+background-color: #99A3a3;
+padding-right:44px;
+padding-bottom:100%;
+}
+#words1{
+background-color: #B4CFEC;
+grid-area: words1;
+}
+#card1{
+grid-area: card1;
+background-color: blue;
+margin:15px;
+border-radius:50px;
+}
+#hero{
+grid-area: hero;
+display: grid;
+place-items: center;
+font-size:40px;
+}
+#back{
+grid-area: back;
+display:grid;
+font-size:20px;
+}
+
