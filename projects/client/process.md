@@ -3,7 +3,7 @@
 I decided to do a website for Mr. Chris
 
 Check in 1:   
-I first talked to him on January 20th, and I showed him my layout. he told me that he was looking for a good website that shows what the UI Elements are and what they do. There wasn't any feedback.
+I first talked to him on January 20th in person, and I showed him my layout. he told me that he was looking for a good website that shows what the UI Elements are and what they do. There wasn't any feedback.
 
 This was my layout at the beginning
 
@@ -17,5 +17,7 @@ When I started developing, I copied the style.css and index.html from my taco tr
 I created two folders inside my project, inputs and buttons. Inside the folders were all the files of those categories. I added a new grid in style.css, put it in the ther files, added placeholder text and a back button and I was finished. 
 
 Check in 2:  
-I talked to him on Febuary 3rd, and showed him the progress. He was happy with the way it was going and had no feedback. I forgot to ask him about adding in the content but he can probably do that. 
+I talked to him on Febuary 3rd in person, and showed him the progress. He was happy with the way it was going and had no feedback. 
+
+Check in 3: Here I asked
 I then added pictures in the media folder and started work on this file.
