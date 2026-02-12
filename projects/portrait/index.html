@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canvas</title>
+		<style>
+canvas{
+	border: black 1px solid;
+}
+		</style>
+	</head>
+	<body> 
+
+	<h1>This is a canvas</h1>
+	<canvas id="canvas" width="800" height="800">
+			</canvas>
+	<script>
+		const canvas = document.getElementById("canvas")
+		const ctx = canvas.getContext("2d");
+
+		
+		//Draw reference image
+		const img = new Image();
+		img.src = "../../images/Portrait.jpg";
+
+		img.onload = function() {
+		ctx.drawImage(img, -70, 0, img.width*0.7, img.height*0.7);
+
+		// draw a green rectangle
+		ctx.fillStyle = "green";
+		ctx.fillRect(100,100,200,300);
+
+		//chin
+		ctx.fillStyle = "black";
+		ctx.lineWidth = 10;
+		ctx.beginPath();
+		ctx.arc(480,370,90,0,Math.PI);
+		ctx.fill();
+
+		// head
+		ctx.beginPath();
+		ctx.moveTo(570,370);
+		ctx.lineTo(390,370);
+		ctx.lineTo(360,230);
+		ctx.lineTo(390,180);
+		ctx.lineTo(460,155);
+		ctx.lineTo(540,175);
+		ctx.lineTo(585,220);
+		ctx.fill();
+		
+		// hair
+		ctx.fillStyle= "brown";
+		ctx.strokeStyle= "brown";
+
+		ctx.beginPath();
+		ctx.moveTo(360, 230);
+			ctx.bezierCurveTo(
+			400, 90,
+			600, 100,
+			585, 220    // End point
+		);
+			// Hair spikes
+		ctx.lineTo(560,205);
+		ctx.lineTo(532,255);
+		ctx.lineTo(512,210);
+		ctx.lineTo(491,260);
+		ctx.lineTo(469,200);
+		ctx.lineTo(444,250);
+		ctx.lineTo(420,207);
+		ctx.lineTo(380,250);
+
+		ctx.fill();
+
+			// ear1
+		ctx.moveTo(375,350);
+
+		};
+
+
+	</script>
+	</body>
+</html>

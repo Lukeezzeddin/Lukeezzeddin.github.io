@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canvas</title>
+		<style>
+canvas{
+	border: black 1px solid;
+}
+		</style>
+	</head>
+	<body> 
+
+	<h1>This is a canvas</h1>
+	<canvas id="canvas" width="800" height="800">
+	</canvas>
+	<script>
+		const canvas = document.getElementById("canvas")
+		const ctx = canvas.getContext("2d");
+
+		// draw a green rectangle
+		ctx.fillstyle = "green";
+		ctx.fillRect(100,100,200,300);
+
+		//black circle in the middle of the screen
+		ctx.fillStyle = "black";
+		ctx.strokeStyle = "red";
+		ctx.lineWidth = 10;
+		ctx.beginPath();
+		ctx.arc(400,400,100,0,Math.PI);
+		ctx.fill();
+		ctx.stroke();
+		ctx.fillStyle = "purple";
+		ctx.beginPath();
+		ctx.ellipse(
+			400,600, // X/Y of center
+			300, // X radius
+			100, // Y radius
+			0,   // Rotation
+			0,   //start
+			2*Math.PI//stop
+			);
+		ctx.fill();
+
+		// tringle
+		ctx.beginPath();
+		ctx.moveTo(700,10);
+		ctx.moveTo(790,150);
+		ctx.lineTo(610,150);
+		ctx.stroke();
+		ctx.fill();
+
+
+	</script>
+	</body>
+</html>
