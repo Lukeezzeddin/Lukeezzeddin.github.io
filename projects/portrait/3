@@ -17,22 +17,20 @@ canvas{
 		const canvas = document.getElementById("canvas")
 		const ctx = canvas.getContext("2d");
 
-			// skin color
-		ctx.fillStyle = "#C28B6B";
+		
+		//Draw reference image
+		const img = new Image();
+		img.src = "../../images/Portrait.jpg";
 
-			// ear1
-		ctx.beginPath();
-		ctx.moveTo(375,290);
-		ctx.bezierCurveTo(360,280,360,370,390,360);
-		ctx.fill();
-			// ear2
-		ctx.beginPath();
-		ctx.moveTo(578,280);
-		ctx.bezierCurveTo(600,280,600,370,570,360);
-		ctx.fill();
+		img.onload = function() {
+		ctx.drawImage(img, -70, 0, img.width*0.7, img.height*0.7);
 
-	
+		// draw a green rectangle
+		ctx.fillStyle = "green";
+		ctx.fillRect(100,100,200,300);
+
 		//chin
+		ctx.fillStyle = "black";
 		ctx.lineWidth = 10;
 		ctx.beginPath();
 		ctx.arc(480,370,90,0,Math.PI);
@@ -50,7 +48,9 @@ canvas{
 		ctx.fill();
 		
 		// hair
-		ctx.fillStyle= "#3B281C";
+		ctx.fillStyle= "brown";
+		ctx.strokeStyle= "brown";
+
 		ctx.beginPath();
 		ctx.moveTo(360, 230);
 			ctx.bezierCurveTo(
@@ -68,25 +68,40 @@ canvas{
 		ctx.lineTo(420,207);
 		ctx.lineTo(380,250);
 		ctx.fill();
-	
+
+			// ear1
+		ctx.beginPath();
+		ctx.fillStyle = "yellow"
+		ctx.moveTo(375,290);
+		ctx.bezierCurveTo(360,280,360,370,390,360);
+		ctx.fill();
+			// ear2
+		ctx.beginPath();
+		ctx.fillStyle = "yellow"
+		ctx.moveTo(580,280);
+		ctx.bezierCurveTo(600,280,600,370,570,360);
+		ctx.fill();
+
+		ctx.drawImage(img, -70, 0, img.width*0.7, img.height*0.7);
+
 		// eyeball 1
 
 		ctx.beginPath();
-		ctx.fillStyle = "#D7BEBA";
+		ctx.fillStyle = "white";
 		ctx.moveTo(415,287);
 		ctx.quadraticCurveTo(440, 260, 465, 287);
 		ctx.quadraticCurveTo(440, 300, 415, 287);
 		ctx.fill();
 
 		// iris 1
-		ctx.fillStyle = "#3F3D36";
+		ctx.fillStyle = "blue";
 
 		ctx.beginPath();
 		ctx.arc(440, 285, 9, 0, 2 * Math.PI, false);
 		ctx.fill();
 
 		// pupil 1
-		ctx.fillStyle = "#2A2322";
+		ctx.fillStyle = "black";
 		ctx.beginPath();
 		ctx.arc(440, 285, 4, 0, 2 * Math.PI, false);
 		ctx.fill();
@@ -96,7 +111,7 @@ canvas{
 		// eyelid 1
 
 		ctx.beginPath();
-		ctx.fillStyle = "#926350";
+		ctx.fillStyle = "gray";
 		ctx.moveTo(415,287);
 		ctx.quadraticCurveTo(440, 260, 465, 287);
 		ctx.quadraticCurveTo(440, 270, 415, 287);
@@ -105,21 +120,21 @@ canvas{
 		// eyeball 2
 
 		ctx.beginPath();
-		ctx.fillStyle = "#D7BEBA";
+		ctx.fillStyle = "white";
 		ctx.moveTo(505,287);
 		ctx.quadraticCurveTo(530, 260, 555, 287);
 		ctx.quadraticCurveTo(530, 300, 505, 287);
 		ctx.fill();
 
 		// iris 2
-		ctx.fillStyle = "#3F3D36";
+		ctx.fillStyle = "blue";
 
 		ctx.beginPath();
 		ctx.arc(530, 285, 9, 0, 2 * Math.PI, false);
 		ctx.fill();
 
 		// pupil 2
-		ctx.fillStyle = "#2A2322";
+		ctx.fillStyle = "black";
 		ctx.beginPath();
 		ctx.arc(530, 285, 4, 0, 2 * Math.PI, false);
 		ctx.fill();
@@ -129,36 +144,22 @@ canvas{
 		// eyelid 2
 
 		ctx.beginPath();
-		ctx.fillStyle = "#926350";
+		ctx.fillStyle = "gray";
 		ctx.moveTo(505,287);
 		ctx.quadraticCurveTo(530, 260, 555, 287);
 		ctx.quadraticCurveTo(530, 270, 505, 287);
 
 		ctx.fill();
 
-
-		// lips 
+		// top lip
 
 		ctx.beginPath();
-		ctx.fillStyle ="#884143";
-		ctx.moveTo(452,381);
-		ctx.quadraticCurveTo(473,363,490,370);
-		ctx.quadraticCurveTo(510,362,522,385);
-		ctx.quadraticCurveTo(515,395,490,390);
-		ctx.quadraticCurveTo(480,395,452,385);
-			
-		ctx.fill();
-
-		// between lips
-
-		ctx.beginPath();	
-		ctx.strokeStyle = "#6A2628";
-		ctx.lineWidth = "4";
-		ctx.moveTo(452,382);
-		ctx.bezierCurveTo(460,385,476,375,490,382);
-		ctx.bezierCurveTo(502,378,508,382,522,386);
+		ctx.fillStyle = "red";
+		ctx.moveTo(455,430);
+		ctx.lineTo(525,450);
 		ctx.stroke();
-		
+
+		};
 
 
 	</script>
